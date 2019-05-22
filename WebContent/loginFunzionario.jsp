@@ -4,8 +4,7 @@
 <html>
 
 <head>
-
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Login</title>
 <meta name="description" content="login" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
@@ -13,7 +12,6 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="favicon.ico" />
-
 </head>
 
 <body>
