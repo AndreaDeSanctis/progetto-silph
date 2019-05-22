@@ -4,8 +4,14 @@
 <html>
 
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8" />
 <title>Fotografi</title>
+<meta name="description" content="fotografi" />
+<meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
+<link rel="stylesheet" type="text/css" href="CSS/fotografi.css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="favicon.ico" />
 </head>
 
 <body>
