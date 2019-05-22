@@ -74,4 +74,16 @@ body {
 		text-decoration: none;
 		color: rgba(245, 245, 245, 1);
 	}
+	.login {
+		background: rgba(100,100,100,1);
+		position: fixed;
+		height: 50%;
+		right: 10%;
+		width: 25%;
+	}
+	.login a {
+		font-size: 2rem;
+		font-weight: 100;
+		text-decoration: none;
+	}
 }
