@@ -17,7 +17,12 @@
 <body>
 <section>
 		<header>
-			<h1><strong> Silph - Srl </strong></h1>
+			<h1>
+				<a href="index.html">Silph Srl</a>
+			</h1>
+			<div class="login">
+				<a href="loginFunzionario.jsp"> Login </a>
+			</div>
 		</header>
 		
 		<div>
