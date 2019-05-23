@@ -132,6 +132,18 @@ header h1 a {
 	width: 60vh;
 }
 
-.fotografi span scritta {
-	
+.fotografi span.scritta {
+	font-size: 4vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+	position: center;
+}
+
+.album span.scritta {
+	font-size: 4vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+	position: center;
 }
