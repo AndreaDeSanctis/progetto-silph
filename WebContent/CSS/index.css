@@ -54,7 +54,7 @@ header h1 {
 	color: #f5f5f5;
 	font-weight: 700;
 	font-size: 12vh;
-	left: 8%;
+	padding-left: 10vh;
 	width: 85%;
 	line-height: 16vh;
 	height: 100%;
@@ -69,13 +69,11 @@ header h1 a {
 
 .login {
 	background: none;
-	position: fixed;
-	height: 10vh;
-	right: 10%;
-	width: 25vh;
-	top: 3%;
-	padding-top: 2vh;
-	padding-left: 10vh;
+	position: absolute;
+	height: 6vh;
+	right: 10vh;
+	width: 12.5vh;
+	top: 5vh;
 }
 
 .login a {
@@ -88,7 +86,7 @@ header h1 a {
 .sottotitolo {
 	position: absolute;
 	padding-top: 20vh;
-	padding-left: 3vh;
+	padding-left: 10vh;
 }
 
 .sottotitolo  h2 {
@@ -99,22 +97,41 @@ header h1 a {
 }
 
 .fotografi {
-	position: relative;
-	padding-left: 10vh;
-	padding-top: 30vh;
+	position: absolute;
+	left: 10vh;
+	top: 30vh;
 	height: 500px;
 	width: 500px;
 }
 
+.fotografi a {
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.fotografi a img {
+	height: 60vh;
+	width: 60vh
+}
+
 .album {
 	position: absolute;
-	display: inline-block;
 	right: 10vh;
 	top: 30vh;
 	height: 500px;
 	width: 500px;
 }
 
-.fotografi scritta {
+.album a {
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.album a img {
+	height: 60vh;
+	width: 60vh;
+}
+
+.fotografi span scritta {
 	
 }
