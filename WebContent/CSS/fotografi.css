@@ -41,37 +41,46 @@ body {
 }
 
 /*elementi che si modificano con dimensione schermo*/
-@media only screen and (max-width: 480px) {
+header {
+	height: 16vh;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	background: rgba(40, 40, 40, 1);
+	color: #f5f5f5;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+header h1 {
+	color: #f5f5f5;
+	font-weight: 700;
+	font-size: 12vh;
+	left: 8%;
+	width: 85%;
+	line-height: 16vh;
+	height: 100%;
+	position: absolute;
+	display: inline-block;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+header h1 a {
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
 }
 
-@media only screen and (min-width: 1025px) {
-	header {
-		height: 16vh;
-		width: 100%;
-		position: fixed;
-		z-index: 10;
-		background: rgba(40, 40, 40, 1);
-		color: #f5f5f5;
-	}
-	header h1 {
-		color: #f5f5f5;
-		font-weight: 700;
-		font-size: 6rem;
-		left: 8%;
-		width: 85%;
-		line-height: 16vh;
-		height: 100%;
-		position: absolute;
-		display: inline-block;
-	}
-	header h1 a {
-		text-decoration: none;
-		color: rgba(245, 245, 245, 1);
-	}
+.login {
+	background: none;
+	position: fixed;
+	height: 10vh;
+	right: 10%;
+	width: 25vh;
+	top: 3%;
+	padding-top: 2vh;
+	padding-left: 10vh;
+}
+
+.login a {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
 }
