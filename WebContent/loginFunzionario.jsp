@@ -27,7 +27,7 @@
 		<span class="error">  ${usernameErr}
 				</span>
 		<br>
-		Password: <input type="password" name="password" placeholder="Password" value= "${param['password']}"/>
+		Password:&nbsp; <input type="password" name="password" placeholder="Password" value= "${param['password']}"/>
 		<span class="error">  ${passwordErr}
 				</span>
 				
