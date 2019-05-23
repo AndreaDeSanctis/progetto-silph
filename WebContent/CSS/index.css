@@ -84,3 +84,37 @@ header h1 a {
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
+
+.sottotitolo {
+	position: absolute;
+	padding-top: 20vh;
+	padding-left: 3vh;
+}
+
+.sottotitolo  h2 {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.fotografi {
+	position: relative;
+	padding-left: 10vh;
+	padding-top: 30vh;
+	height: 500px;
+	width: 500px;
+}
+
+.album {
+	position: absolute;
+	display: inline-block;
+	right: 10vh;
+	top: 30vh;
+	height: 500px;
+	width: 500px;
+}
+
+.fotografi scritta {
+	
+}
