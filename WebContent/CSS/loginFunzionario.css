@@ -84,3 +84,9 @@ header h1 a {
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
+
+.logintab {
+	position : fixed;
+	top: 50px;
+	right: 50px;
+}

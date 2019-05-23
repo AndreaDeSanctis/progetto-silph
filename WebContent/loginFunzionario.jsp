@@ -27,13 +27,12 @@
 			</div>
 		</header>
 		
-		<div class="username"> 
+	
+		<div class="logintab"> 
 		Username: <input type="text" name="username" placeholder="Username" value= "${param['username']}"/>
 		<span class="error">  ${usernameErr}
 				</span>
-		</div>
 		
-		<div class="password">
 		Password: <input type="text" name="password" placeholder="password" value= "${param['password']}"/>
 		<span class="error">  ${passwordErr}  <%--  DA CRIPTARE --%>
 				</span>
