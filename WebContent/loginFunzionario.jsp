@@ -15,19 +15,13 @@
 </head>
 
 <body>
-	<section>
 		<form action="funzionarioController" method="post">
 		
 		<header>
-			<h1>
-				<a href="index.html">Silph Srl</a>
-			</h1>
-			<div class="login">
-				<a href="loginFunzionario.jsp"> Login </a>
-			</div>
+			<h1><a href="index.html">Silph Srl</a></h1>
 		</header>
 		
-	
+		<article>
 		<div class="logintab"> 
 		Username: <input type="text" name="username" placeholder="Username" value= "${param['username']}"/>
 		<span class="error">  ${usernameErr}
@@ -37,10 +31,11 @@
 		<span class="error">  ${passwordErr}  <%--  DA CRIPTARE --%>
 				</span>
 		</div>
+		</article>
 		
 		<input type="submit" value="Accedi">
 		</form>
-	</section>
+		
 </body>
 
 </html>
