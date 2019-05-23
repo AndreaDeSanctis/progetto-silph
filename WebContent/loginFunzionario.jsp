@@ -22,18 +22,18 @@
 		</header>
 		
 		<article>
-		<div class="logintab"> 
+		<div class="logintab">
 		Username: <input type="text" name="username" placeholder="Username" value= "${param['username']}"/>
 		<span class="error">  ${usernameErr}
 				</span>
-		
-		Password: <input type="text" name="password" placeholder="password" value= "${param['password']}"/>
-		<span class="error">  ${passwordErr}  <%--  DA CRIPTARE --%>
+		<br>
+		Password: <input type="password" name="password" placeholder="Password" value= "${param['password']}"/>
+		<span class="error">  ${passwordErr}
 				</span>
+				
+		<input type="submit" value="Accedi">
 		</div>
 		</article>
-		
-		<input type="submit" value="Accedi">
 		</form>
 		
 </body>
