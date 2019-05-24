@@ -69,13 +69,11 @@ header h1 a {
 
 .login {
 	background: none;
-	position: fixed;
-	height: 10vh;
-	right: 10%;
-	width: 25vh;
-	top: 3%;
-	padding-top: 2vh;
-	padding-left: 10vh;
+	position: absolute;
+	height: 6vh;
+	right: 20vh;
+	width: 12.5vh;
+	top: 5vh;
 }
 
 .login a {
