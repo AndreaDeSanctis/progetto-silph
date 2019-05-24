@@ -71,7 +71,7 @@ header h1 a {
 	background: none;
 	position: absolute;
 	height: 6vh;
-	right: 5%;
+	right: 10vh;
 	width: 12.5vh;
 	top: 5vh;
 }
@@ -116,7 +116,7 @@ header h1 a {
 
 .album {
 	position: absolute;
-	right: 5%;
+	right: 10vh;
 	top: 30vh;
 	height: 60vh;
 	width: 60vh;
