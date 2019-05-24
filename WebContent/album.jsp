@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="UTF-8" />
-<title>Album</title>
+<title>Album - Silph Srl</title>
 <meta name="description" content="album" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
 <link rel="stylesheet" type="text/css" href="CSS/album.css" />

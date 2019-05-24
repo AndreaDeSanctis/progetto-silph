@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="UTF-8" />
-<title>Fotografi</title>
+<title>Fotografi - Silph Srl</title>
 <meta name="description" content="fotografi" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
 <link rel="stylesheet" type="text/css" href="CSS/fotografi.css" />
