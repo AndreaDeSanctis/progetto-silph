@@ -30,6 +30,7 @@
 		<div class="sottotitolo">
 			<h2>I nostri fotografi:</h2>
 		</div>
+		
 		<c:forEach var="fotografo" items="${fotografi}">
 			<table class="fotografo">
 				<tr>
@@ -41,24 +42,6 @@
 				</tr>
 			</table>
 		</c:forEach>
-
-		<div>
-			<img src="http://" alt="immagine fotografo 2" /> <span> <em>
-					Daniele Software </em>
-			</span>
-		</div>
-
-		<div>
-			<img src="http://" alt="immagine fotografo 3" /> <span> <em>
-					Ricky Ficky </em>
-			</span>
-		</div>
-
-		<div>
-			<img src="http://" alt="immagine fotografo 4" /> <span> <em>
-					Marzia Pellegrino </em>
-			</span>
-		</div>
 
 	</section>
 </body>
