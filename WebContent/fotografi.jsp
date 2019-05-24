@@ -25,16 +25,16 @@
 			</div>
 		</header>
 		
-		<div>
-			<h2> <strong>I nostri fotografi: </strong></h2>
+		<div class="sottotitolo">
+			<h2>I nostri fotografi: </h2>
+		</div>
+	
+		<div class="fotografo">
+		<a href="schedaFotografo.jsp"> <img src="images/fotografi/${param['name']}_${param['surname']}.jpg"
+				alt="immagine fotografo"> <span class="scritta">${param['name']} ${param['surname']}</span>
+			</a>
 		</div>
 		
-		<div>
-			<img src="http://" alt="immagine fotografo 1" /> 
-			<span> 
-				<em> Federico Design </em> 
-			</span>
-		</div>
 		
 		<div>
 			<img src="http://" alt="immagine fotografo 2" /> 

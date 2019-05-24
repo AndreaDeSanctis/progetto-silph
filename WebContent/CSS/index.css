@@ -111,7 +111,15 @@ header h1 a {
 
 .fotografi a img {
 	height: 60vh;
-	width: 60vh
+	width: 60vh;
+}
+
+.fotografi span.scritta {
+	font-size: 4vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+	position: center;
 }
 
 .album {
@@ -130,14 +138,6 @@ header h1 a {
 .album a img {
 	height: 60vh;
 	width: 60vh;
-}
-
-.fotografi span.scritta {
-	font-size: 4vh;
-	font-weight: 300;
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-	position: center;
 }
 
 .album span.scritta {
