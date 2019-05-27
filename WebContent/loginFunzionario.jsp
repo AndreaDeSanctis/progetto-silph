@@ -30,9 +30,9 @@
 
 		<article>
 			<div class="logintab">
-				Username: <input type="text" name="username" placeholder="Username"
-					value="${param['username']}" /> <span class="error">
-					${usernameErr} </span> <br> Password:&nbsp; <input type="password"
+				Email: <input type="text" name="email" placeholder="Email"
+					value="${param['email']}" /> <span class="error">
+					${emailErr} </span> <br> Password:&nbsp; <input type="password"
 					name="password" placeholder="Password" value="${param['password']}" />
 				<span class="error"> ${passwordErr} </span> <input type="submit"
 					value="Accedi">

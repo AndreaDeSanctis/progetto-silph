@@ -36,11 +36,11 @@ public class FunzionarioController extends HttpServlet {
 			funzionarioForm.setNome(request.getParameter("nome").toUpperCase());
 			funzionarioForm.setCognome(request.getParameter("cognome").toUpperCase());
 			session.setAttribute("funzionarioForm", funzionarioForm);
-			nextPage = "/fotografo.jsp";
+			nextPage = "/funzionario.jsp";
 		}
 		
 		else {
-			nextPage = "/newFunzionario.jsp";
+			nextPage = "/loginFunzionario.jsp";
 		}
 		
 		//in caso senza cookies
