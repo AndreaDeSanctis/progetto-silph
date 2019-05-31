@@ -14,17 +14,19 @@
 	rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
 	rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="logo2.ico" />
 </head>
 
 <body>
 	<section>
 		<header>
+			<a href="index.html"> <img src="images/logo2.jpg" alt="logo sito">
+			</a>
 			<h1>
 				<a href="index.html">Silph Srl</a>
 			</h1>
 			<div class="login">
-				<a href="loginFunzionario.jsp"> Login </a>
+				<a href="loginFunzionario.jsp">Login</a>
 			</div>
 		</header>
 
