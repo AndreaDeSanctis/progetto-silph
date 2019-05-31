@@ -23,16 +23,13 @@
 			<h1>
 				<a href="index.html">Silph Srl</a>
 			</h1>
-			<div class="login">
-				<a href="loginFunzionario.jsp">Login</a>
-			</div>
 		</header>
 
 		<article>
 			<div class="logintab">
-				Email: <input type="text" name="email" placeholder="Email"
-					value="${param['email']}" /> <span class="error">
-					${emailErr} </span> <br> Password:&nbsp; <input type="password"
+				Username: <input type="text" name="username" placeholder="Username"
+					value="${param['username']}" /> <span class="error">
+					${euernameErr} </span> <br> Password:&nbsp; <input type="password"
 					name="password" placeholder="Password" value="${param['password']}" />
 				<span class="error"> ${passwordErr} </span> <input type="submit"
 					value="Accedi">
