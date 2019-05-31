@@ -5,7 +5,7 @@ public class Funzionario {
 	private long id;
 	private String nome;
 	private String cognome;
-	private String email;
+	private String username;
 	private String password;
 	
 	public long getId() {
@@ -26,11 +26,11 @@ public class Funzionario {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-	public String getEmail() {
-		return email;
+	public String getUsername() {
+		return username;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;

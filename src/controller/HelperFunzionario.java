@@ -7,8 +7,8 @@ public class HelperFunzionario {
 	public boolean isValid(HttpServletRequest request) {
 
 		String nome = request.getParameter("nome").trim();
-		String cognome = request.getParameter("nome").trim();
-		String email = request.getParameter("nome").trim();
+		String cognome = request.getParameter("cognome").trim();
+		String username = request.getParameter("username").trim();
 
 		boolean corretto = true;
 
@@ -26,9 +26,9 @@ public class HelperFunzionario {
 			corretto=false;
 		}
 
-		if(email.equals("")) {
-			String messError = "L'email e' un campo obbligatorio";
-			request.setAttribute("emailError", messError);
+		if(username.equals("")) {
+			String messError = "L'username e' un campo obbligatorio";
+			request.setAttribute("usernameError", messError);
 			corretto=false;
 		}
 
