@@ -1,8 +1,6 @@
-package controller;
+package progettosilph.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -13,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.Funzionario;
-import service.FunzionarioServices;
+import progettosilph.model.Funzionario;
+import progettosilph.service.FunzionarioServices;
 
 @WebServlet("/conferma")
 public class ConfermaController extends HttpServlet{

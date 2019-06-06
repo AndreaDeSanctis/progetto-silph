@@ -1,4 +1,4 @@
-package controller;
+package progettosilph.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

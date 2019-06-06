@@ -1,9 +1,9 @@
-package service;
+package progettosilph.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Funzionario;
+import progettosilph.model.Funzionario;
 
 public class FunzionarioServices {
 
