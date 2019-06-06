@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" href="css/funzionario.css" />
+<meta charset="ISO-8859-1" />
+<title>Funzionario</title>
+</head>
+<body>
+		<div>
+		<h4>Funzionario</h4>
+		<div>
+			Nome: <span th:text="${funzionario.nome}">qui-va-nome</span>
+		</div>
+		<div>
+			Cognome: <span th:text="${funzionario.cognome}">qui-va-cognome</span>
+		</div>
+
+	</div>
+</body>
+</html>
