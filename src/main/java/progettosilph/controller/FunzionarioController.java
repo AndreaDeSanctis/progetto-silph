@@ -1,74 +1,58 @@
 package progettosilph.controller;
 
-import java.io.IOException;
-import java.util.List;
+import javax.validation.Valid;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import progettosilph.model.Funzionario;
 import progettosilph.service.FunzionarioServices;
+import progettosilph.service.FunzionarioValidator;
 
-@WebServlet("/funzionarioController")
-public class FunzionarioController extends HttpServlet {
+@Controller
+public class FunzionarioController {
 
-	
-	private static final long serialVersionUID = 1L;
+	@Autowired
+	private FunzionarioValidator funzValidator;
 
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
-		String nextPage;
-		
-		HelperFunzionario helperFunz = new HelperFunzionario();
-		FunzionarioForm funzionarioForm = new FunzionarioForm();
-		HttpSession session = request.getSession();
-		
-		//se valido
-		if(helperFunz.isValid(request)) {
-			funzionarioForm.setNome(request.getParameter("nome").toUpperCase());
-			funzionarioForm.setCognome(request.getParameter("cognome").toUpperCase());
-			session.setAttribute("funzionarioForm", funzionarioForm);
-			nextPage = "/funzionario.jsp";
+	@Autowired
+	private FunzionarioServices funzService;
+
+	@RequestMapping(value = "/funzionario", method = RequestMethod.POST)
+	public String newFunzionario(@Valid @ModelAttribute("studente") Funzionario funz,
+			Model model, BindingResult bindingResult) {
+		this.funzValidator.validate(funz, bindingResult);
+
+		if(!bindingResult.hasErrors()) {
+			this.funzService.inserisci(funz);
+			model.addAttribute("funzionari", this.funzService.tutti());
+			return "funzionari.html";
+		} else {
+			return "signupFunzionario.html";
 		}
-		
-		else {
-			nextPage = "/loginFunzionario.jsp";
+	}
+
+	//il valore che ci aspettiamo nel parametro id è quello specifico contenuto in value
+	@RequestMapping(value = "/funzionario/{id}", method = RequestMethod.GET)
+	public String getFunzionario(@PathVariable ("id") Long id, Model model) {
+		if(id != null) {
+			model.addAttribute("funzionario", this.funzService.funzionarioPerId(id));
+			return "funzionario.html"; 
+		} else {
+			model.addAttribute("funzionari", this.funzService.tutti());
+			return "funzionari.html"; 
 		}
-		
-		//in caso senza cookies
-		response.encodeURL(nextPage);
-		
-		//gestione risposte andando alla pagina opportuna
-		ServletContext application = getServletContext();
-		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
-		rd.forward(request, response);
-		return;
 	}
 	
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
-		String nextPage = "/funzionari.jsp";
-		FunzionarioServices funzionarioServ = new FunzionarioServices();
-		List<Funzionario> funzionari = funzionarioServ.listaFunzionari();
-		
-		request.setAttribute("funzionari", funzionari);
-		
-		ServletContext application = getServletContext();
-		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
-		rd.forward(request, response);
-		return;
+	@RequestMapping("/addFunzionario")
+	public String addFunzionario(Model model) {
+		model.addAttribute("funzionario", new Funzionario());
+		return "signupFunzionario.html";
 	}
-	
-	
-
 }

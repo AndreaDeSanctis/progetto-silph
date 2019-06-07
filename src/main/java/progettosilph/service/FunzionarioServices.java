@@ -1,37 +1,31 @@
 package progettosilph.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import progettosilph.model.Funzionario;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import progettosilph.model.Funzionario;
+import progettosilph.repository.FunzionarioRepository;
+
+@Service
 public class FunzionarioServices {
 
-	public void salvaFunzionario(Funzionario Funzionario) {
-		//TODO
+	@Autowired //crea da solo l'oggetto e assegnalo alla variabile
+	private FunzionarioRepository funzRepository;
+	
+	@Transactional
+	public Funzionario inserisci(Funzionario funz) {
+		return funzRepository.save(funz);
 	}
 
-	public List<Funzionario> listaFunzionari(){
-		List<Funzionario> funzionari = new ArrayList<>() ;
+	@Transactional
+	public List<Funzionario> tutti() {
+		return (List<Funzionario>) funzRepository.findAll();
+	}
 
-		Funzionario f1 = new Funzionario();
-		f1.setId(1l);
-		f1.setNome("Andrea");
-		f1.setCognome("De Sanctis");
-		funzionari.add(f1);
-
-		Funzionario f2 = new Funzionario();
-		f2.setId(2l);
-		f2.setNome("Daniele");
-		f2.setCognome("D'Amico");
-		funzionari.add(f2);
-
-		Funzionario f3 = new Funzionario();
-		f3.setId(3l);
-		f3.setNome("Federico");
-		f3.setCognome("Giuliana");
-		funzionari.add(f3);
-
-		return funzionari;
+	public Funzionario funzionarioPerId(Long id) {
+		return this.funzRepository.findById(id).get();
 	}
 }
