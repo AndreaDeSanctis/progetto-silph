@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" href="css/funzionari.css" />
+<meta charset="ISO-8859-1" />
+<title>Funzionari</title>
+</head>
+<body>
+<div>
+	<h4> Lista funzionari </h4>
+</div>
+
+<ul>
+	<li th:each="funzionario: ${funzionari}"> <a
+		th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
+		th:text="${funionario.nome}"> paolo
+	</a>
+</ul>
+
+
+</body>
+</html>

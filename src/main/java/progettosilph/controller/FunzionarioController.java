@@ -25,7 +25,7 @@ public class FunzionarioController {
 	private FunzionarioServices funzService;
 
 	@RequestMapping(value = "/funzionario", method = RequestMethod.POST)
-	public String newFunzionario(@Valid @ModelAttribute("studente") Funzionario funz,
+	public String newFunzionario(@Valid @ModelAttribute("funzionario") Funzionario funz,
 			Model model, BindingResult bindingResult) {
 		this.funzValidator.validate(funz, bindingResult);
 
