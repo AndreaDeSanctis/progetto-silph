@@ -30,7 +30,7 @@ public class ConfermaController extends HttpServlet{
 		Funzionario.setNome(FunzionarioForm.getNome());
 		Funzionario.setCognome(FunzionarioForm.getCognome());
 				
-		FunzionarioServices.salvaFunzionario(Funzionario);
+		FunzionarioServices.inserisci(Funzionario);
 		
 		String nextPage = "/fine.jsp";
 		
