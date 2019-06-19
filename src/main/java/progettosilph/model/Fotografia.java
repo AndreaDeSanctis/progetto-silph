@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Fotografia {
@@ -13,9 +12,7 @@ public class Fotografia {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	String categoria;
-	
-	@ManyToOne
-	private Fotografo fotografo;
+	private long idFotografo;
 	
 	public long getId() {
 		return id;
@@ -23,11 +20,11 @@ public class Fotografia {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Fotografo getFotografo() {
-		return fotografo;
+	public long getFotografo() {
+		return idFotografo;
 	}
-	public void setFotografo(Fotografo fotografo) {
-		this.fotografo = fotografo;
+	public void setFotografo(long idFotografo) {
+		this.idFotografo = idFotografo;
 	}
 	public String getCategoria() {
 		return categoria;

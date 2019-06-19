@@ -26,18 +26,18 @@
 	</header>
 	
 	<div class="sottotitolo">
-			<h2>Inserisci il nome del fotografo:</h2>
+			<h2>Inserisci l'id del fotografo e la categoria:</h2>
 		</div>
 	
 	<form th:action="@{/fotografo}" method="POST" th:object="${fotografo}">
 		<article>
 			<div class="logintab">
-				Nome: <input type="text" name="nome" placeholder="Nome"
-					th:field="*{nome}" /> <span
-					th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
-				<br> Cognome: <input type="text" name="cognome"
-					placeholder="Cognome" th:field="*{cognome}" /> <span
-					th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}">
+				Id Fotografo: <input type="text" name="idFotografo" placeholder="Id Fotografo"
+					th:field="*{idFotografo}" /> <span
+					th:if="${#fields.hasErrors('idFotografo')}" th:errors="*{idFotografo}"></span>
+				<br> Categoria: <input type="text" name="categoria"
+					placeholder="Categoria" th:field="*{categoria}" /> <span
+					th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}">
 				</span>
 				<button type="submit">Inserisci</button>
 			</div>

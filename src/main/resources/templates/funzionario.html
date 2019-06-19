@@ -1,21 +1,46 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org"
-	xmlns="http://www.w3.org/1999/html">
+	xmlns="http://www.w3.org/1999/html" lang="it">
+
 <head>
-<link rel="stylesheet" href="css/funzionario.css" />
-<meta charset="ISO-8859-1" />
-<title>Funzionario</title>
+<meta charset="UTF-8" />
+<title>Silph Srl</title>
+<meta name="description" content="inziale" />
+<meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
+<link href="../static/css/funzionario.css"
+	th:href="@{/css/funzionario.css}" rel="stylesheet" />
+<!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
-		<div>
+	<header>
+		<a th:href="@{/}"> <img src="images/logo2.jpg" alt="logo sito">
+		</a>
+		<h1>
+			<a th:href="@{/}">Silph Srl</a>
+		</h1>
+	</header>
+	<div class="sottotitolo">
 		<h4>Funzionario</h4>
-		<div>
-			Nome: <span th:text="${funzionario.nome}">qui-va-nome</span>
-		</div>
-		<div>
-			Cognome: <span th:text="${funzionario.cognome}">qui-va-cognome</span>
-		</div>
+	</div>
+	<div class="dati">
+		Nome: <span th:text="${funzionario.nome}">qui-va-nome</span>
+	</div>
+	<div>
+		Cognome: <span th:text="${funzionario.cognome}">qui-va-cognome</span>
+	</div>
 
+	<div class="azione">
+		<a th:href="@{/inserisciFotografo}">Inserisci un nuovo fotografo.</a>
+	</div>
+	<div class="azione">
+		<a th:href="@{/inserisciFotografia}">Inserisci una nuova
+			fotografia.</a>
 	</div>
 </body>
 </html>
