@@ -34,7 +34,8 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
      * The datasource where to find users in our application.
      * It is a bean (meaning that it is only initialized once)
      */
-    private DataSource dataSource;
+    @SuppressWarnings("unused")
+	private DataSource dataSource;
 
     /**
      * The configure method is the main method in the AuthConfiguration.
