@@ -9,6 +9,6 @@ import progettosilph.model.Funzionario;
 public interface FunzionarioRepository extends CrudRepository<Funzionario, Long> {
 
 	//findByDatiDaRecuperare (sarebbero le variabili nel db)
-	public List<Funzionario> findByNome(String nome);
-	public List<Funzionario> findByNomeAndCognome(String nome, String cognome);
+	public Funzionario findByUsername(String username);
+	public List<Funzionario> findByUsernameAndPassword(String username, String password);
 }

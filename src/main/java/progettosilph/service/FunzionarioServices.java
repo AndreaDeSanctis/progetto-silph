@@ -30,4 +30,9 @@ public class FunzionarioServices {
 	public Funzionario funzionarioPerId(Long id) {
 		return this.funzRepository.findById(id).get();
 	}
+	
+	@Transactional
+	public Funzionario funzionarioPerUsername(String username) {
+		return this.funzRepository.findByUsername(username);
+	}
 }

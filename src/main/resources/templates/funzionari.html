@@ -33,7 +33,7 @@
 
 	<ul>
 		<li th:each="funzionario : ${funzionari}"><a
-			th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
+			th:href="@{'/funzionario' + '/' + ${funzionario.username}}"
 			th:text="${funzionario.nome}"> qui-va-nome </a>
 	</ul>
 

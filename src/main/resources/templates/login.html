@@ -21,7 +21,8 @@
 			<a th:href="@{/}">Silph Srl</a>
 		</h1>
 	</header>
-	<form th:action="@{'/funzionario' + '/' + ${funzionario.id}}" method="GET" th:object="${funzionario}">
+	<form th:action="@{'/funzionario' + '/' + ${funzionario.username}}"
+		method="GET" th:object="${funzionario}">
 		<article>
 			<div class="logintab">
 				Username: <input type="text" name="username" placeholder="Username"
