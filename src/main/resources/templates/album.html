@@ -38,7 +38,7 @@
 		</div>
 
 		<ul>
-			<li th:each="fotografia : ${album}"><a
+			<li th:each="fotografia : ${fotografia}"><a
 				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
 				th:text="${fotografia.id}"> qui-va-id </a>
 		</ul>
