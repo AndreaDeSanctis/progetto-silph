@@ -32,17 +32,18 @@ public class FunzionarioController {
 		if(!bindingResult.hasErrors()) {
 			this.funzService.inserisci(funz);
 			model.addAttribute("funzionario", this.funzService.funzionarioPerId(funz.getId()));
-			return this.getFunzionario(funz.getUsername(), model);
+			return "funzionario.html";
+			//			return this.getFunzionario(funz.getId(), model);
 		} else {
 			return "signupFunzionario.html";
 		}
 	}
 
 	//il valore che ci aspettiamo nel parametro id è quello specifico contenuto in value
-	@RequestMapping(value = "/funzionario/{username}", method = RequestMethod.GET)
-	public String getFunzionario(@PathVariable ("username") String username, Model model) {
-		if(username != null) {
-			model.addAttribute("funzionario", this.funzService.funzionarioPerUsername(username));
+	@RequestMapping(value = "/funzionario/{id}", method = RequestMethod.GET)
+	public String getFunzionario(@PathVariable ("id") Long id, Model model) {
+		if(id != null) {
+			model.addAttribute("funzionario", this.funzService.funzionarioPerId(id));
 			return "funzionario.html"; 
 		} else {
 			model.addAttribute("funzionari", this.funzService.tutti());

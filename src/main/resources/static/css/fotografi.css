@@ -129,12 +129,13 @@ header h1 a {
 	padding-left: 15vh;
 }
 
-.elenco {
-	font-size: 4vh;
-	font-weight: 300;
+.elenco a {
+	font-size: 2vh;
+	font-weight: 100;
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
+
 /* .fotografo { */
 /* 	position: absolute; */
 /* 	left: 10vh; */

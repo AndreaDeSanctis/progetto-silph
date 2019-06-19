@@ -39,9 +39,11 @@
 		<div>
 		<ul class="list">
 			<li class="elenco"
-				th:each="fotografo : ${fotografo}"><a
+				th:each="fotografo : ${fotografi}"><a
 				th:href="@{'/fotografo' + '/' + ${fotografo.id}}"
 				th:text="${fotografo.nome}"> qui-va-nome </a>
+				<a th:href="@{'/fotografo' + '/' + ${fotografo.id}}"
+				th:text="${fotografo.cognome}"> qui-va-cognome </a>
 		</ul>
 		</div>
 	</section>

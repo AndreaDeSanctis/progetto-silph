@@ -25,7 +25,7 @@ public class FotografiaController {
 	private FotografiaServices fotografiaService;
 
 	@RequestMapping(value = "/fotografia", method = RequestMethod.POST)
-	public String newFotografia(@Valid @ModelAttribute("Fotografia") Fotografia fotografia,
+	public String newFotografia(@Valid @ModelAttribute("fotografia") Fotografia fotografia,
 			Model model, BindingResult bindingResult) {
 		this.fotografiaValidator.validate(fotografia, bindingResult);
 

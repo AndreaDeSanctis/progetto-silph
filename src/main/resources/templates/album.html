@@ -37,8 +37,9 @@
 			<h2>I nostri album:</h2>
 		</div>
 
-		<ul>
-			<li th:each="fotografia : ${fotografia}"><a
+		<ul class="list">
+			<li class="elenco"
+				th:each="fotografia : ${fotografie}"><a
 				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
 				th:text="${fotografia.id}"> qui-va-id </a>
 		</ul>

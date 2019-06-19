@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org"
-	xmlns="http://www.w3.org/1999/html"
-	lang="it">
+	xmlns="http://www.w3.org/1999/html" lang="it">
 
 <head>
 <meta charset="UTF-8" />
 <title>Silph Srl</title>
 <meta name="description" content="inziale" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link href="../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet" />
+<link href="../static/css/index.css" th:href="@{/css/index.css}"
+	rel="stylesheet" />
 <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
 	rel='stylesheet' type='text/css'>
@@ -39,16 +39,16 @@
 			<h2>Cosa vuoi vedere?</h2>
 		</div>
 		<div class="fotografi" style="text-align: center">
-			<a th:href="@{/visualizzaFotografi}"> <img src="images/fotografo.jpg"
-				alt="immagine fotografi"> <br>
-			<span class="scritta"><em>Fotografi</em></span>
+			<a th:href="@{/visualizzaFotografi}"> <img
+				src="images/fotografo.jpg" alt="immagine fotografi"> <br>
+				<span class="scritta"><em>Fotografi</em></span>
 			</a>
 		</div>
 
 		<div class="album" style="text-align: center">
-			<a th:href="@{/visualizzaAlbum}"><img src="images/album.jpg"
-				alt="immagine album"> <br>
-			<span class="scritta"><em>Album</em></span> </a>
+			<a th:href="@{/visualizzaFotografie}"><img src="images/album.jpg"
+				alt="immagine album"> <br> <span class="scritta"><em>Album</em></span>
+			</a>
 		</div>
 
 	</section>

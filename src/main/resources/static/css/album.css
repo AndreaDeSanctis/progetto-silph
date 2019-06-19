@@ -123,4 +123,16 @@ header h1 a {
 	color: rgba(245, 245, 245, 1);
 }
 
+.list {
+	position: absolute;
+	padding-top: 30vh;
+	padding-left: 15vh;
 }
+
+.elenco {
+	font-size: 4vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+

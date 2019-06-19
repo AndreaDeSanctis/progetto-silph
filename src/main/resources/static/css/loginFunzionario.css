@@ -126,3 +126,17 @@ input[type=submit] {
     width: 80px;
     text-align: center;
 }
+
+.sottotitolo {
+	position: absolute;
+	padding-top: 20vh;
+	padding-left: 10vh;
+}
+
+.sottotitolo h2 {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
