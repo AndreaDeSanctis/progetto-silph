@@ -1,20 +1,54 @@
 package progettosilph.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "funzionari")
 public class Funzionario {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "id", columnDefinition = "serial", nullable = false)
 	private long id;
+	
+	@Column(name = "nome")
 	private String nome;
+	
+	@Column(name = "cognome")
 	private String cognome;
+	
+	@Column(name = "username", unique=true)
 	private String username;
+	
+	@Column(name = "password")
 	private String password;
+	
+	/**
+     * Constructor
+     *
+     * @param id The id of this Funzionario
+     * @param nome The name of this Funzionario
+     * @param cognome The surname  of this Funzionario
+     * @param username The username of this Funzionario for authentication
+     * @param password The password of this Funzionario for authentication
+     */
+	public Funzionario(Long id, String nome, String cognome, String username, String password) {
+        this.id = id;
+        this.nome = nome;
+        this.cognome = cognome;
+        this.username = username;
+        this.password = password;
+    }
+	 /**
+     * Empty Constructor
+     */
+     public Funzionario() {
+    }
 	
 	public long getId() {
 		return id;

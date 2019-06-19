@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<meta name="description" content="login" />
+<meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
+<link rel="stylesheet" type="text/css" href="css/loginFunzionario.css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="logo2.ico" />
+</head>
+<body>
+	<header>
+		<a href="index.html"> <img src="images/logo2.jpg" alt="logo sito">
+		</a>
+		<h1>
+			<a href="index.html">Silph Srl</a>
+		</h1>
+	</header>
+	<form th:action="@{/funzionario}" method="POST"
+		th:object="${funzionario}">
+		<article>
+			<div class="logintab">
+				Username: <input type="text" name="username" placeholder="Username"
+					th:field="*{username}" /> <span
+					th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+				<br> Password:&nbsp; <input type="password" name="password"
+					placeholder="Password" th:field="*{password}" /> <span
+					th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
+				</span>
+				<button type="submit">Accedi</button>
+			</div>
+		</article>
+	</form>
+
+</body>
+
+</html>
