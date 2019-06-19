@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -50,10 +51,10 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
 
                     // only admin can access the admin page
                     .antMatchers(HttpMethod.GET, "/admin").hasAnyAuthority("ADMIN")
-
+                    
                     // all authenticated users can access all the other pages (that is, welcome)
                     .anyRequest().authenticated()
-
+                    
                 // login paragraph: we are going to define here how to login
                 // use formlogin protocol to perform login
                 .and().formLogin()
@@ -70,6 +71,11 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
                     .logoutUrl("/logout")
                     // after logout is successful, redirect to / page (home)
                     .logoutSuccessUrl("/");
+    }
+    
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/resources/static/css/**").anyRequest();
     }
 
     @Autowired
