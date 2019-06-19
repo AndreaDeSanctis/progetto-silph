@@ -28,6 +28,9 @@ public class Funzionario {
 	@Column(name = "password")
 	private String password;
 	
+    @Column(name = "role")
+    protected String role;
+	
 	/**
      * Constructor
      *
@@ -79,6 +82,12 @@ public class Funzionario {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 	
