@@ -7,16 +7,26 @@
 <title>Funzionari</title>
 </head>
 <body>
-<div>
-	<h4> Lista funzionari </h4>
-</div>
+	<header>
+		<a th:href="@{/}"> <img src="images/logo2.jpg" alt="logo sito">
+		</a>
+		<h1>
+			<a href="index.html">Silph Srl</a>
+		</h1>
+		<div class="login">
+			<a href="loginFunzionario.html">Login</a>
+		</div>
+	</header>
+	
+	<div>
+		<h4>Lista funzionari</h4>
+	</div>
 
-<ul>
-	<li th:each="funzionario: ${funzionari}"> <a
-		th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
-		th:text="${funionario.nome}"> paolo
-	</a>
-</ul>
+	<ul>
+		<li th:each="funzionario: ${funzionari}"><a
+			th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
+			th:text="${funionario.nome}"> paolo </a>
+	</ul>
 
 
 </body>

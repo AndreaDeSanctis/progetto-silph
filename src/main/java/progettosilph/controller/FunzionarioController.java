@@ -55,4 +55,10 @@ public class FunzionarioController {
 		model.addAttribute("funzionario", new Funzionario());
 		return "signupFunzionario.html";
 	}
+	
+	@RequestMapping("/loginFunzionario")
+	public String loginFunzionario(Model model) {
+		model.addAttribute("funzionario", new Funzionario());
+		return "login.html";
+	}
 }

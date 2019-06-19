@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns="http://www.w3.org/1999/html">
-	
+
 <head>
 <meta charset="UTF-8" />
 <title>Fotografi - Silph Srl</title>
@@ -32,17 +32,11 @@
 			<h2>I nostri fotografi:</h2>
 		</div>
 
-		<c:forEach var="fotografo" items="${fotografi}">
-			<table class="fotografo">
-				<tr>
-					<td><a href="schedaFotografo.html"> <img
-							src="images/fotografi/${param['name']}_${param['surname']}.jpg"
-							alt="immagine fotografo"> <span class="scritta">${param['name']}
-								${param['surname']}</span>
-					</a></td>
-				</tr>
-			</table>
-		</c:forEach>
+		<ul>
+			<li th:each="funzionario: ${funzionari}"><a
+				th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
+				th:text="${funionario.nome}"> paolo </a>
+		</ul>
 
 	</section>
 </body>

@@ -22,13 +22,13 @@
 	<section>
 
 		<header>
-			<a href="index.html"> <img src="images/logo2.jpg" alt="logo sito">
+			<a th:href="@{/}"> <img src="images/logo2.jpg" alt="logo sito">
 			</a>
 			<h1>
 				<a href="index.html">Silph Srl</a>
 			</h1>
 			<div class="login">
-				<a href="loginFunzionario.html">Login</a>
+				<a href="@{/loginFunzionario}">Login</a>
 			</div>
 			<div class="signup">
 				<a th:href="@{/addFunzionario}">Signup</a>
