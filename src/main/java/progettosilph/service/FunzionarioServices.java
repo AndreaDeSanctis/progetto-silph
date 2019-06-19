@@ -17,6 +17,7 @@ public class FunzionarioServices {
 	
 	@Transactional
 	public Funzionario inserisci(Funzionario funz) {
+		funz.setRole("ADMIN");
 		return funzRepository.save(funz);
 	}
 
@@ -25,6 +26,7 @@ public class FunzionarioServices {
 		return (List<Funzionario>) funzRepository.findAll();
 	}
 
+	@Transactional
 	public Funzionario funzionarioPerId(Long id) {
 		return this.funzRepository.findById(id).get();
 	}
