@@ -7,7 +7,7 @@
 <title>Fotografi - Silph Srl</title>
 <meta name="description" content="fotografi" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link href="../static/css/fotografi.css" th:href="@{/css/index.css}" rel="stylesheet" />
+<link href="../static/css/fotografi.css" th:href="@{/css/fotografi.css}" rel="stylesheet" />
 <!-- <link rel="stylesheet" type="text/css" href="css/fotografi.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
 	rel='stylesheet' type='text/css'>
@@ -36,12 +36,13 @@
 			<h2>I nostri fotografi:</h2>
 		</div>
 
-		<ul>
-			<li th:each="fotografo : ${fotografo}"><a
+		<ul class="list">
+			<li class="elenco"
+				th:each="fotografo : ${fotografo}"><a
 				th:href="@{'/fotografo' + '/' + ${fotografo.id}}"
 				th:text="${fotografo.nome}"> qui-va-nome </a>
 		</ul>
-
+		</div>
 	</section>
 </body>
 
