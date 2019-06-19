@@ -6,7 +6,8 @@
 <title>Login</title>
 <meta name="description" content="login" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link rel="stylesheet" type="text/css" href="css/loginFunzionario.css" />
+<link href="../static/css/loginFunzionario.css"
+	th:href="@{/css/loginFunzionario.css}" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
 	rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
@@ -21,8 +22,8 @@
 			<a th:href="@{/}">Silph Srl</a>
 		</h1>
 	</header>
-	<form th:action="@{'/funzionario' + '/' + ${funzionario.username}}"
-		method="GET" th:object="${funzionario}">
+	<form th:action="@{'/funzionario' + '/' + ${funzionario.id}}"
+		method="POST" th:object="${funzionario}">
 		<article>
 			<div class="logintab">
 				Username: <input type="text" name="username" placeholder="Username"

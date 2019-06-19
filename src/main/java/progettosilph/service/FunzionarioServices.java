@@ -32,7 +32,7 @@ public class FunzionarioServices {
 	}
 	
 	@Transactional
-	public List<Funzionario> funzionarioPerUsername(String username) {
+	public Funzionario funzionarioPerUsername(String username) {
 		return this.funzRepository.findByUsername(username);
 	}
 }

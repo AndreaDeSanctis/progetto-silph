@@ -13,6 +13,7 @@ public class Fotografia {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	String nome;
 	String categoria;
 	private long idFotografo;
 	
@@ -22,10 +23,10 @@ public class Fotografia {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public long getFotografo() {
+	public long getIdFotografo() {
 		return idFotografo;
 	}
-	public void setFotografo(long idFotografo) {
+	public void setIdFotografo(long idFotografo) {
 		this.idFotografo = idFotografo;
 	}
 	public String getCategoria() {
@@ -33,5 +34,11 @@ public class Fotografia {
 	}
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}	
 }

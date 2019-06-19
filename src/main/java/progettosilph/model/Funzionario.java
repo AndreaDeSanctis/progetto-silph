@@ -90,6 +90,11 @@ public class Funzionario {
 		this.role = role;
 	}
 	
+	public boolean checkPassword(Funzionario funzionario) {
+		String passwordDaVerificare = funzionario.getPassword();
+		return this.password.equals(passwordDaVerificare);
+}
+	
 	
 	
 }

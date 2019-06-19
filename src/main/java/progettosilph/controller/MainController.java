@@ -25,7 +25,7 @@ public class MainController {
 		return "signupFunzionario.html";
 	}
 	
-	@RequestMapping(value = "/loginFunzionario", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginFunzionario(Model model) {
 		model.addAttribute("funzionario", new Funzionario());
 		return "login.html";

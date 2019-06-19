@@ -49,11 +49,18 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
 
                     // everyone (authenticated or not) can access the home page
                     .antMatchers(HttpMethod.GET, "/", "/index", "/addFunzionario",
+                    		"/loginFunzionario", "/login", "/visualizzaFotografi",
+                    		"/visualizzaAlbum", "/fotografo", "/fotografia").permitAll()
+                    
+                    .antMatchers(HttpMethod.POST, "/", "/index", "/addFunzionario",
                     		"/loginFunzionario", "/visualizzaFotografi",
                     		"/visualizzaAlbum", "/fotografo", "/fotografia").permitAll()
 
                     // only admin can access the admin page
                     .antMatchers(HttpMethod.GET, "/funzionario", "/inserisciFotografo",
+                    		"/inserisciFotografia").hasAnyAuthority("ADMIN")
+                    
+                    .antMatchers(HttpMethod.POST, "/funzionario", "/inserisciFotografo",
                     		"/inserisciFotografia").hasAnyAuthority("ADMIN")
                      
                     // all authenticated users can access all the other pages (that is, welcome)
@@ -61,9 +68,9 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
                     
                 // login paragraph: we are going to define here how to login
                 // use formlogin protocol to perform login
-                .and().formLogin().loginPage("/loginFunzionario")
+                .and().formLogin().loginPage("/login")
                     // after login is successful, redirect to /funzionario page
-                    .defaultSuccessUrl("/funzionario/{username}")
+                    .defaultSuccessUrl("/")
                 //NOTE: we are using the default configuration for login,
                 // meaning that the /login url is automatically mapped to auto-generated page.
                 // for our own page, we would need to use loginPage()
