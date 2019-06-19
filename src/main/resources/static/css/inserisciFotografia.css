@@ -78,22 +78,6 @@ header h1 a {
 	color: rgba(245, 245, 245, 1);
 }
 
-.login {
-	background: none;
-	position: absolute;
-	height: 6vh;
-	right: 10vh;
-	width: 12.5vh;
-	top: 5vh;
-}
-
-.login a {
-	font-size: 5vh;
-	font-weight: 300;
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-}
-
 .sottotitolo {
 	position: absolute;
 	padding-top: 20vh;
@@ -128,7 +112,7 @@ input {
   	margin: 7px auto;	
 }
 
-input[type=submit] {
+button[type=submit] {
 	display: inline-block;
 	background-color: grey;
 	border: none;

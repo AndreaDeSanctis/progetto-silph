@@ -78,6 +78,37 @@ header h1 a {
 	color: rgba(245, 245, 245, 1);
 }
 
+.login {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 10vh;
+	width: 12.5vh;
+	top: 5vh;
+}
+
+.login a {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.signup {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 30vh;
+	width: 12.5vh;
+	top: 5vh;
+}
+
+.signup a {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
 
 .sottotitolo {
 	position: absolute;
@@ -85,7 +116,7 @@ header h1 a {
 	padding-left: 10vh;
 }
 
-.sottotitolo h4 {
+.sottotitolo  h4 {
 	font-size: 5vh;
 	font-weight: 300;
 	text-decoration: none;
@@ -104,18 +135,4 @@ header h1 a {
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
-
-.azione {
-	position: absolute;
-	padding-top: 50vh;
-	padding-left: 20vh;
-}
-
-.azione a {
-	font-size: 4vh;
-	font-weight: 300;
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-}
-
 

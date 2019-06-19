@@ -1,19 +1,46 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns="http://www.w3.org/1999/html">
+
 <head>
-<link rel="stylesheet" href="css/funzionario.css" />
-<meta charset="ISO-8859-1" />
+<meta charset="UTF-8" />
 <title>Fotografo</title>
+<meta name="description" content="fotografo" />
+<meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
+<link href="../static/css/fotografo.css"
+	th:href="@{/css/fotografo.css}" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="css/funzionario.css" /> -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
-	<div>
+	<header>
+		<a th:href="@{/}"> <img src="images/logo2.jpg" alt="logo sito">
+			</a>
+			<h1>
+				<a th:href="@{/}">Silph Srl</a>
+			</h1>
+			<div class="login">
+				<a th:href="@{/loginFunzionario}">Login</a>
+			</div>
+			<div class="signup">
+				<a th:href="@{/addFunzionario}">Signup</a>
+			</div>
+	</header>
+	<div class="sottotitolo">
 		<h4>Fotografo:</h4>
-		<div>
+	</div>
+	<div>
+		<div class="dati">
+		<h2>
 			Nome: <span th:text="${fotografo.nome}">qui-va-nome</span>
-		</div>
-		<div>
+		<br>
 			Cognome: <span th:text="${fotografo.cognome}">qui-va-cognome</span>
+		</h2>
 		</div>
 	</div>
 </body>

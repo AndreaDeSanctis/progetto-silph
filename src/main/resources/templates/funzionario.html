@@ -29,16 +29,16 @@
 		<h4>Funzionario</h4>
 	</div>
 	<div class="dati">
+	<h2>
 		Nome: <span th:text="${funzionario.nome}">qui-va-nome</span>
-	</div>
-	<div>
+	<br>
 		Cognome: <span th:text="${funzionario.cognome}">qui-va-cognome</span>
+	</h2> 
 	</div>
 
 	<div class="azione">
 		<a th:href="@{/inserisciFotografo}">Inserisci un nuovo fotografo.</a>
-	</div>
-	<div class="azione">
+	<br>
 		<a th:href="@{/inserisciFotografia}">Inserisci una nuova
 			fotografia.</a>
 	</div>
