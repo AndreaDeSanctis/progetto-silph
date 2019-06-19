@@ -7,7 +7,7 @@
 <title>Album - Silph Srl</title>
 <meta name="description" content="album" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link href="../static/css/fotografi.css" th:href="@{/css/index.css}"
+<link href="../static/css/album.css" th:href="@{/css/album.css}"
 	rel="stylesheet" />
 <!-- <link rel="stylesheet" type="text/css" href="css/album.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
@@ -36,13 +36,15 @@
 		<div class="sottotitolo">
 			<h2>I nostri album:</h2>
 		</div>
-
+		
+		<div>
 		<ul class="list">
 			<li class="elenco"
 				th:each="fotografia : ${fotografie}"><a
 				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
-				th:text="${fotografia.id}"> qui-va-id </a>
+				th:text="${fotografia.nome}"> qui-va-nome </a>
 		</ul>
+		</div>
 	</section>
 </body>
 

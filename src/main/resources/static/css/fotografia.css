@@ -116,22 +116,35 @@ header h1 a {
 	padding-left: 10vh;
 }
 
-.sottotitolo h2 {
+.sottotitolo  h4 {
 	font-size: 5vh;
 	font-weight: 300;
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
 
-.list {
+.dati {
 	position: absolute;
 	padding-top: 30vh;
 	padding-left: 15vh;
 }
 
-.elenco a {
-	font-size: 2vh;
-	font-weight: 100;
+.dati span {
+	font-size: 4vh;
+	font-weight: 300;
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
+}
+
+.fotografia {
+	position: absolute;
+	left: 10vh;
+	top: 40vh;
+	height: 60vh;
+	width: 60vh;
+}
+
+.fotografia a img {
+	height: 60vh;
+	width: 60vh;
 }

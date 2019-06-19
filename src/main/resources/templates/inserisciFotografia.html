@@ -7,7 +7,8 @@
 <title>Inserimento Fotografia</title>
 <meta name="description" content="inserimento fotografo" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link href="../static/css/inserisciFotografo.css" th:href="@{/css/inserisciFotografo.css}" rel="stylesheet" />
+<link href="../static/css/inserisciFotografo.css"
+	th:href="@{/css/inserisciFotografo.css}" rel="stylesheet" />
 <!-- <link rel="stylesheet" type="text/css" href="css/inserisciFotografo.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
 	rel='stylesheet' type='text/css'>
@@ -24,21 +25,26 @@
 			<a th:href="@{/}">Silph Srl</a>
 		</h1>
 	</header>
-	
+
 	<div class="sottotitolo">
-			<h2>Inserisci l'id del fotografo e la categoria della foto:</h2>
-		</div>
-	
-	<form th:action="@{/fotografia}" method="POST" th:object="${fotografia}">
+		<h2>Inserisci l'id del fotografo, la categoria e il nome della foto:</h2>
+	</div>
+
+	<form th:action="@{/fotografia}" method="POST"
+		th:object="${fotografia}">
 		<article>
 			<div class="logintab">
-				Id Fotografo: <input type="text" name="idFotografo" placeholder="Id Fotografo"
-					th:field="*{idFotografo}" /> <span
-					th:if="${#fields.hasErrors('idFotografo')}" th:errors="*{idFotografo}"></span>
-				<br> Categoria: <input type="text" name="categoria"
-					placeholder="Categoria" th:field="*{categoria}" /> <span
+				Id Fotografo: <input type="text" name="idFotografo"
+					placeholder="Id Fotografo" th:field="*{idFotografo}" /> <span
+					th:if="${#fields.hasErrors('idFotografo')}"
+					th:errors="*{idFotografo}"></span> 
+					<br> Categoria: <input
+					type="text" name="categoria" placeholder="Categoria"
+					th:field="*{categoria}" /> <span
 					th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}">
-				</span>
+				</span> <br> Nome: <input type="text" name="nome" placeholder="Nome"
+					th:field="*{nome}" /> <span th:if="${#fields.hasErrors('nome')}"
+					th:errors="*{nome}"> </span>
 				<button type="submit">Inserisci</button>
 			</div>
 		</article>
