@@ -3,11 +3,13 @@ package progettosilph.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import progettosilph.model.Fotografo;
 import progettosilph.repository.FotografoRepository;
 
+@Service
 public class FotografoServices {
 
 	@Autowired //crea da solo l'oggetto e assegnalo alla variabile
