@@ -12,6 +12,7 @@ public class Fotografia {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	String categoria;
 	
 	@ManyToOne
 	private Fotografo fotografo;
@@ -27,5 +28,11 @@ public class Fotografia {
 	}
 	public void setFotografo(Fotografo fotografo) {
 		this.fotografo = fotografo;
+	}
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}	
 }

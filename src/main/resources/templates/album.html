@@ -7,57 +7,41 @@
 <title>Album - Silph Srl</title>
 <meta name="description" content="album" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link rel="stylesheet" type="text/css" href="css/album.css" />
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+<link href="../static/css/fotografi.css" th:href="@{/css/index.css}"
+	rel="stylesheet" />
+<!-- <link rel="stylesheet" type="text/css" href="css/album.css" /> -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="logo2.ico" />
 </head>
 
 <body>
 	<section>
 		<header>
-			<a href="index.html"> <img src="images/logo2.jpg" alt="logo sito">
+			<a th:href="@{/}"> <img src="images/logo2.jpg" alt="logo sito">
 			</a>
 			<h1>
-				<a href="index.html">Silph Srl</a>
+				<a th:href="@{/}">Silph Srl</a>
 			</h1>
 			<div class="login">
-				<a href="loginFunzionario.html">Login</a>
+				<a th:href="@{/loginFunzionario}">Login</a>
+			</div>
+			<div class="signup">
+				<a th:href="@{/addFunzionario}">Signup</a>
 			</div>
 		</header>
-		
-		<div>
-			<h2><strong> I nostri album: </strong> <br>
-			Cosa vuoi vedere?</h2>			
+
+		<div class="sottotitolo">
+			<h2>I nostri album:</h2>
 		</div>
-		
-		<div>
-			<img src="http://" alt="paesaggi" /> 
-			<span> 
-				<em> Paesaggi </em> 
-			</span>
-		</div>
-		
-		<div>
-			<img src="http://" alt="gatti" /> 
-			<span> 
-				<em> Gatti </em> 
-			</span>
-		</div>
-		
-		<div>
-			<img src="http://" alt="pozzanghere" /> 
-			<span> 
-				<em> Pozzanghere </em> 
-			</span>
-		</div>
-		
-		<div>
-			<img src="http://" alt="finestre" /> 
-			<span> 
-				<em> Finestre </em> 
-			</span>
-		</div>
+
+		<ul>
+			<li th:each="funzionario: ${funzionari}"><a
+				th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
+				th:text="${funionario.nome}"> paolo </a>
+		</ul>
 	</section>
 </body>
 

@@ -93,3 +93,34 @@ header h1 a {
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
+
+.signup {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 30vh;
+	width: 12.5vh;
+	top: 5vh;
+}
+
+.signup a {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.sottotitolo {
+	position: absolute;
+	padding-top: 20vh;
+	padding-left: 10vh;
+}
+
+.sottotitolo h2 {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+}
