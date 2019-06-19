@@ -38,9 +38,9 @@
 		</div>
 
 		<ul>
-			<li th:each="funzionario: ${funzionari}"><a
-				th:href="@{'/funzionario' + '/' + ${funzionario.id}}"
-				th:text="${funionario.nome}"> paolo </a>
+			<li th:each="fotografia : ${album}"><a
+				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
+				th:text="${fotografia.id}"> qui-va-id </a>
 		</ul>
 	</section>
 </body>
