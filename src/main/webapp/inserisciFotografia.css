@@ -94,83 +94,49 @@ header h1 a {
 	color: rgba(245, 245, 245, 1);
 }
 
-.signup {
-	background: none;
-	position: absolute;
-	height: 6vh;
-	right: 30vh;
-	width: 12.5vh;
-	top: 5vh;
-}
-
-.signup a {
-	font-size: 5vh;
-	font-weight: 300;
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-}
-
 .sottotitolo {
 	position: absolute;
 	padding-top: 20vh;
 	padding-left: 10vh;
 }
 
-.sottotitolo  h2 {
+.sottotitolo h2 {
 	font-size: 5vh;
 	font-weight: 300;
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 }
 
-.fotografi {
-	position: absolute;
-	left: 10vh;
-	top: 30vh;
-	height: 60vh;
-	width: 60vh;
-}
 
-.fotografi a {
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-}
-
-.fotografi a img {
-	height: 60vh;
-	width: 60vh;
-}
-
-.fotografi span.scritta {
+article {
+	position : fixed;
+	display: block;
+	top: 40%;
 	font-size: 4vh;
-	font-weight: 300;
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-	position: center;
+	padding: 30px;
+	left: 7vh;
 }
 
-.album {
-	position: absolute;
-	right: 10vh;
-	top: 30vh;
-	height: 60vh;
-	width: 60vh;
+input {
+	display: inline-block;
+    background: white; /* Colore di sfondo */
+    border: 1px solid #323232; /* Bordo */
+    height: 30px; /* Altezza casella*/
+    width: 300px; /* Larghezza */
+    padding: 0 15px;
+    text-align:left;
+  	margin: 7px auto;	
 }
 
-.album a {
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-}
-
-.album a img {
-	height: 60vh;
-	width: 60vh;
-}
-
-.album span.scritta {
-	font-size: 4vh;
-	font-weight: 300;
-	text-decoration: none;
-	color: rgba(245, 245, 245, 1);
-	position: center;
+input[type=submit] {
+	display: inline-block;
+	background-color: grey;
+	border: none;
+	color: white;
+	padding: 0px 15px;
+	margin: 4px 2px;
+	cursor: pointer;
+	height: 31px; 
+    width: 80px;
+    text-align: center;
 }

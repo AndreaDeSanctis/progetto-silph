@@ -4,11 +4,11 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Login - Silph Srl</title>
-<meta name="description" content="login" />
+<title>Inserimento Fotografia</title>
+<meta name="description" content="inserimento fotografo" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
 <link href="../static/css/inserisciFotografo.css" th:href="@{/css/inserisciFotografo.css}" rel="stylesheet" />
-<!-- <link rel="stylesheet" type="text/css" href="css/loginFunzionario.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="css/inserisciFotografo.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
 	rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
@@ -24,22 +24,24 @@
 			<a href="index.html">Silph Srl</a>
 		</h1>
 	</header>
-	<form th:action="@{/funzionario}" method="POST"
-		th:object="${funzionario}">
+	
+	<div class="sottotitolo">
+			<h2>Inserisci il nome del fotografo:</h2>
+		</div>
+	
+	<form th:action="@{/fotografo}" method="POST" th:object="${fotografo}">
 		<article>
 			<div class="logintab">
-				Username: <input type="text" name="username" placeholder="Username"
-					th:field="*{username}" /> <span
-					th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
-				<br> Password:&nbsp; <input type="password" name="password"
-					placeholder="Password" th:field="*{password}" /> <span
-					th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
+				Nome: <input type="text" name="nome" placeholder="Nome"
+					th:field="*{nome}" /> <span
+					th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+				<br> Cognome: <input type="text" name="cognome"
+					placeholder="Cognome" th:field="*{cognome}" /> <span
+					th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}">
 				</span>
-				<button type="submit">Registrati</button>
+				<button type="submit">Inserisci</button>
 			</div>
 		</article>
 	</form>
-
 </body>
-
 </html>

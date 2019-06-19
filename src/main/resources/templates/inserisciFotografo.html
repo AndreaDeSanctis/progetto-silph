@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Inserimento Fotografo</title>
+<meta name="description" content="inserimento fotografo" />
+<meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
+<link href="../static/css/inserisciFotografo.css" th:href="@{/css/inserisciFotografo.css}" rel="stylesheet" />
+<!-- <link rel="stylesheet" type="text/css" href="css/inserisciFotografo.css" /> -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="logo2.ico" />
 </head>
-<body>
 
+<body>
+	<header>
+		<a href="index.html"> <img src="images/logo2.jpg" alt="logo sito">
+		</a>
+		<h1>
+			<a href="index.html">Silph Srl</a>
+		</h1>
+	</header>
+	
+	<div class="sottotitolo">
+			<h2>Inserisci il fotografo:</h2>
+		</div>
+	
+	<form th:action="@{/fotografo}" method="POST" th:object="${fotografo}">
+		<article>
+			<div class="logintab">
+				Nome: <input type="text" name="nome" placeholder="Nome"
+					th:field="*{nome}" /> <span
+					th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+				<br> Cognome: <input type="text" name="cognome"
+					placeholder="Cognome" th:field="*{cognome}" /> <span
+					th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}">
+				</span>
+				<button type="submit">Inserisci</button>
+			</div>
+		</article>
+	</form>
 </body>
 </html>
