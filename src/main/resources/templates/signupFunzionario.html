@@ -28,7 +28,14 @@
 		th:object="${funzionario}">
 		<article>
 			<div class="logintab">
-				Username: <input type="text" name="username" placeholder="Username"
+				Nome:&emsp;&ensp;&thinsp;&thinsp;
+				 <input type="text" name="nome" placeholder="Nome"
+					th:field="*{nome}" /> <span
+					th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+				<br> Cognome:&nbsp; <input type="text" name="cognome" placeholder="Cognome"
+					th:field="*{cognome}" /> <span
+					th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></span>
+				<br> Username: <input type="text" name="username" placeholder="Username"
 					th:field="*{username}" /> <span
 					th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
 				<br> Password:&nbsp; <input type="password" name="password"
