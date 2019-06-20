@@ -126,7 +126,15 @@ header h1 a {
 .list {
 	position: absolute;
 	padding-top: 30vh;
-	padding-left: 15vh;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.elenco {
+	display: inline-block;
 }
 
 .elenco a {
@@ -135,6 +143,11 @@ header h1 a {
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
 	line-height: 1.6;
+}
+
+.elenco a img{
+	height: 30vh;
+	width: auto;
 }
 
 

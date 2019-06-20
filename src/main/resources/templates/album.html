@@ -36,14 +36,16 @@
 		<div class="sottotitolo">
 			<h2>Le nostre foto:</h2>
 		</div>
-		
+
 		<div class="list">
-		<ul>
-			<li class="elenco"
-				th:each="fotografia : ${fotografie}"><a
-				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
-				th:text="${fotografia.nome}"> qui-va-nome </a>
-		</ul>
+			<ul>
+				<li class="elenco" th:each="fotografia : ${fotografie}"> <a th:href="@{'/fotografia' + '/' + ${fotografia.id}}" > <img
+						th:src="'/images/fotografie' + '/' + ${fotografia.nome} + '.jpg'"
+						alt="fotografia" />
+				</a><br><em><a 
+					th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
+					th:text="${fotografia.nome}"> qui-va-nome </a> </em> </li>
+			</ul>
 		</div>
 	</section>
 </body>
