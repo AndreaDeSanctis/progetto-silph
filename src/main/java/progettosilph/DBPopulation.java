@@ -38,10 +38,10 @@ public class DBPopulation implements ApplicationRunner {
 	
 	private void deleteAll() {
         System.out.println("Deleting all users from DB...");
+        richiestaRepository.deleteAll();
         fotografiaRepository.deleteAll();
         fotografoRepository.deleteAll();
         funzionarioRepository.deleteAll();
-        richiestaRepository.deleteAll();
         System.out.println("Done");
     }
 	
