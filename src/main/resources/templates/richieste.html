@@ -4,10 +4,10 @@
 
 <head>
 <meta charset="UTF-8" />
-<title>Richiesta</title>
-<meta name="description" content="richiesta" />
+<title>Album - Silph Srl</title>
+<meta name="description" content="album" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link href="../static/css/richiesta.css" th:href="@{/css/richiesta.css}"
+<link href="../static/css/richieste.css" th:href="@{/css/richieste.css}"
 	rel="stylesheet" />
 <!-- <link rel="stylesheet" type="text/css" href="css/album.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
@@ -25,23 +25,24 @@
 			<h1>
 				<a th:href="@{/}">Silph Srl</a>
 			</h1>
-			
-			<div class="richiesta">
-				<a th:href="@{/addToRichiesta}">Aggiungi<br>&ensp;Foto</a>
+			<div class="login">
+				<a th:href="@{/login}">Login</a>
 			</div>
-			
+			<div class="signup">
+				<a th:href="@{/addFunzionario}">Signup</a>
+			</div>
 		</header>
 
 		<div class="sottotitolo">
-			<h2>Le foto da te richieste:</h2>
+			<h2>Le richieste in corso:</h2>
 		</div>
 		
 		<div>
 		<ul class="list">
 			<li class="elenco"
-				th:each="fotografia : ${fotografieR}"><a
-				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
-				th:text="${fotografia.nome}"> qui-va-nome </a>
+				th:each="richiesta : ${richieste}"><a
+				th:href="@{'/richiesta' + '/' + ${richiesta.id}}"
+				th:text="${richiesta.nome}"> qui-va-nome </a>
 		</ul>
 		</div>
 	</section>

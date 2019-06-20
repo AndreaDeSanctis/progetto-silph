@@ -82,4 +82,11 @@ public class RichiestaController {
 		}
 	}
 	
+	@RequestMapping(value = "/seeRequest", method = RequestMethod.GET)
+	public String seeRequest(Model model) {
+		model.addAttribute("richieste", this.richiestaService.tutti());
+		return "richieste.html";
+
+	}
+	
 }
