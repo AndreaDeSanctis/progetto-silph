@@ -27,20 +27,21 @@
 	</header>
 
 	<div class="sottotitolo">
-		<h2>Inserisci il nome della richiesta e l'id della foto che vuoi aggiungere:</h2>
+		<h2>Inserisci il nome della richiesta e l'id della foto che vuoi
+			aggiungere:</h2>
 	</div>
 
-	<form th:action="@{/richiesta}" method="POST"
-		th:object="${richieste}">
+	<form th:action="@{/addFotoRichiesta}" method="POST"
+		th:object="${richiesta}">
 		<article>
 			<div class="logintab">
 				Nome: <input type="text" name="nome" placeholder="Nome"
 					th:field="*{nome}" /> <span th:if="${#fields.hasErrors('nome')}"
-					th:errors="*{nome}"> </span>
-					<br>Id Fotografia: <input type="text" name="id" placeholder="Id"
-					th:field="*{id}" /> <span th:if="${#fields.hasErrors('id')}"
-					th:errors="*{id}"> </span>
-				<button type="submit">Inserisci</button><br>
+					th:errors="*{nome}"> </span> <br>Id Fotografia: <input
+					type="text" name="id" placeholder="Id" th:field="*{id}" /> <span
+					th:if="${#fields.hasErrors('id')}" th:errors="*{id}"> </span>
+				<button type="submit">Inserisci</button>
+				<br>
 			</div>
 		</article>
 	</form>

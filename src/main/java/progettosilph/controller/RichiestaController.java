@@ -63,7 +63,7 @@ public class RichiestaController {
 //				model.addAttribute("richiesta", richiestaInMemoria);
 //				return "richiesta.html";
 //			} else {
-//				return "richieste.html"; //"scegliRichiesta.html" ???
+//				return "richieste.html";
 //			}
 //		}
 //		else return "richieste.html";
@@ -71,23 +71,21 @@ public class RichiestaController {
 
 	@RequestMapping(value = "/addToRichiesta", method = RequestMethod.GET)
 	public String addToRichiesta(Model model) {
-		model.addAttribute("null", null);
+		model.addAttribute("richiestaProva", new Richiesta());
 		return "aggiungiAllaRichiesta.html";
 	}
 	
-	@RequestMapping(value = "/addFotografia/{id}", method = RequestMethod.POST)
-	public String addFotografia(Long id, @RequestParam("id") Long idFoto, Model model, BindingResult bindingResult) {
-
-		Fotografia foto = this.fotografiaService.fotografiaPerId(idFoto);
-		Richiesta richiesta = this.richiestaService.richiestaPerId(id);
-
-		if(foto!=null && richiesta!=null) {
-			richiesta.getFotografie().add(foto);
-			model.addAttribute("richiesta", richiesta);
-			return "richiesta.html";
-		} else {
-			return "aggiungiAllaRichiesta.html";
-		}
+	@RequestMapping(value = "/addFotoRichiesta", method = RequestMethod.POST)
+	public String addFotoRichiesta(@Valid @ModelAttribute("richiesta") Richiesta richiesta,
+			Long id, Model model, BindingResult bindingResult) {
+				
+		
+		
+		
+		
+		return null;
+		
+		
 	}
 	
 	@RequestMapping(value = "/seeRequest", method = RequestMethod.GET)

@@ -56,10 +56,10 @@ header a {
 }
 
 header a img {
-	height:13vh;
+	height: 13vh;
 	width: 13vh;
-	position:relative;
-	top:1.5vh;
+	position: relative;
+	top: 1.5vh;
 }
 
 header h1 {
@@ -138,12 +138,11 @@ header h1 a {
 }
 
 .dati img {
-	height:40vh;
+	height: 40vh;
 	width: 40vh;
-	position:relative;
-	top:2vh;
+	position: relative;
+	top: 2vh;
 }
-
 
 .richiesta {
 	background: none;
@@ -162,11 +161,21 @@ header h1 a {
 	color: rgba(245, 245, 245, 1);
 }
 
-
 .list {
-	position: absolute;
+	position: center;
 	padding-top: 40vh;
-	padding-left: 15vh;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.elenco {
+	display: inline-block;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	margin-right: 0.8vh
 }
 
 .elenco a {
@@ -177,4 +186,7 @@ header h1 a {
 	line-height: 1.6;
 }
 
-
+.elenco a img {
+	height: 30vh;
+	width: auto;
+}

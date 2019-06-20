@@ -41,14 +41,24 @@
 				Richiesta: &ensp; <span th:text="${richiesta.nome}">qui-va-nome</span>
 			</h2>
 		</div>
-		<div>
-			<ul class="list">
-				<li class="elenco" th:each="fotografia : ${richiesta.fotografie}"><a
+<!-- 		<div> -->
+<!-- 			<ul class="list"> -->
+<!-- 				<li class="elenco" th:each="fotografia : ${richiesta.fotografie}"><a -->
+<!-- 					th:href="@{'/fotografia' + '/' + ${fotografia.id}}" -->
+<!-- 					th:text="${fotografia.nome}"> qui-va-nome </a> -->
+<!-- 			</ul> -->
+			<div class="list">
+			<ul>
+				<li class="elenco" th:each="fotografia : ${richiesta.fotografie}"> <a th:href="@{'/fotografia' + '/' + ${fotografia.id}}" > <img
+						th:src="'/images/fotografie' + '/' + ${fotografia.nome} + '.jpg'"
+						alt="fotografia" />
+				</a><br><em><a 
 					th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
-					th:text="${fotografia.nome}"> qui-va-nome </a>
+					th:text="${fotografia.nome}"> qui-va-nome </a> </em> </li>
 			</ul>
-
 		</div>
+
+<!-- 		</div> -->
 	</section>
 </body>
 
