@@ -25,24 +25,29 @@
 			<h1>
 				<a th:href="@{/}">Silph Srl</a>
 			</h1>
-			
+
 			<div class="richiesta">
-				<a th:href="@{/addToRichiesta}">Aggiungi<br>&ensp;Foto</a>
+				<a th:href="@{/addToRichiesta}">Aggiungi<br>&ensp;Foto
+				</a>
 			</div>
-			
+
 		</header>
 
 		<div class="sottotitolo">
 			<h2>Le foto da te richieste:</h2>
 		</div>
-		
+		<div class="dati">
+			<h2>
+				Richiesta: &ensp; <span th:text="${richiesta.nome}">qui-va-nome</span>
+			</h2>
+		</div>
 		<div>
-		<ul class="list">
-			<li class="elenco"
-				th:each="fotografia : ${fotografieR}"><a
-				th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
-				th:text="${fotografia.nome}"> qui-va-nome </a>
-		</ul>
+			<ul class="list">
+				<li class="elenco" th:each="fotografia : ${richiesta.fotografie}"><a
+					th:href="@{'/fotografia' + '/' + ${fotografia.id}}"
+					th:text="${fotografia.nome}"> qui-va-nome </a>
+			</ul>
+
 		</div>
 	</section>
 </body>

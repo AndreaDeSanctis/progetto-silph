@@ -1,1 +1,180 @@
-@charset "UTF-8";
+html {
+	font-family: 'Ubuntu', 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: rgba(245, 245, 245, 1);
+	background: rgba(45, 45, 45, 1);
+	height: 100%;
+	width: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, footer, header, hgroup, menu, nav, output, ruby,
+	section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html, body, article, aside, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+*, *:after, *:before {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: greyscale;
+}
+
+body {
+	overflow: auto;
+	background: rgba(45, 45, 45, 1);
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+/*elementi che si modificano con dimensione schermo*/
+header {
+	height: 16vh;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	background: rgba(40, 40, 40, 1);
+	color: #f5f5f5;
+}
+
+header a {
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+header a img {
+	height:13vh;
+	width: 13vh;
+	position:relative;
+	top:1.5vh;
+}
+
+header h1 {
+	color: #f5f5f5;
+	font-weight: 700;
+	font-size: 12vh;
+	width: 85%;
+	line-height: 16vh;
+	height: 100%;
+	position: absolute;
+	display: inline-block;
+}
+
+header h1 a {
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.login {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 10vh;
+	width: 12.5vh;
+	top: 5vh;
+}
+
+.login a {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.signup {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 30vh;
+	width: 12.5vh;
+	top: 5vh;
+}
+
+.signup a {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.sottotitolo {
+	position: absolute;
+	padding-top: 20vh;
+	padding-left: 10vh;
+}
+
+.sottotitolo h2 {
+	font-size: 5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.dati {
+	position: absolute;
+	padding-top: 30vh;
+	padding-left: 15vh;
+	line-height: 1.6;
+}
+
+.dati span {
+	font-size: 4vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+.dati img {
+	height:40vh;
+	width: 40vh;
+	position:relative;
+	top:2vh;
+}
+
+
+.richiesta {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 10vh;
+	width: 12.5vh;
+	top: 3vh;
+	text-align: center;
+}
+
+.richiesta a {
+	font-size: 4.5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
+
+.list {
+	position: absolute;
+	padding-top: 30vh;
+	padding-left: 15vh;
+}
+
+.elenco a {
+	font-size: 3.3vh;
+	font-weight: 100;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+	line-height: 1.6;
+}
+
+

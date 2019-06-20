@@ -37,7 +37,6 @@ public class RichiestaController {
 		if(!bindingResult.hasErrors()) {
 			this.richiestaService.inserisci(richiesta);
 			model.addAttribute("richiesta", richiesta);
-			model.addAttribute("fotografieR", richiesta.getFotografie());
 			return "richiesta.html";
 		} else {
 			return "inserisciRichiesta.html";
@@ -52,17 +51,16 @@ public class RichiestaController {
 			Richiesta richiestaInMemoria = this.richiestaService.richiestaPerNome(richiesta.getNome());
 			if((richiestaInMemoria!=null)) {
 				model.addAttribute("richiesta", richiestaInMemoria);
-				model.addAttribute("fotografieR", richiestaInMemoria.getFotografie());
 				return "richiesta.html";
 			} else {
-				return "inserisciRichiesta.html"; //"scegliRichiesta.html" ???
+				return "richieste.html"; //"scegliRichiesta.html" ???
 			}
 		}
-		else return "inserisciRichiesta.html";
+		else return "richieste.html";
 	}
 
 	@RequestMapping(value = "/addToRichiesta", method = RequestMethod.GET)
-	public String addRichiesta(Model model) {
+	public String addToRichiesta(Model model) {
 		model.addAttribute("null", null);
 		return "aggiungiAllaRichiesta.html";
 	}

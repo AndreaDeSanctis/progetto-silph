@@ -31,24 +31,16 @@
 	</div>
 
 	<form th:action="@{/richiesta}" method="POST"
-		th:object="${richiesta}">
+		th:object="${richieste}">
 		<article>
 			<div class="logintab">
 				Nome: <input type="text" name="nome" placeholder="Nome"
 					th:field="*{nome}" /> <span th:if="${#fields.hasErrors('nome')}"
 					th:errors="*{nome}"> </span>
-				<button type="submit">Inserisci</button><br>
-			</div>
-		</article>
-	</form>
-	<form th:action="@{/addFotografia}" method="POST"
-		th:object="${richiesta.fotografie}">
-		<article>
-			<div class="logintab2">
-				<br>Id Fotografia: <input type="text" name="id" placeholder="Id"
+					<br>Id Fotografia: <input type="text" name="id" placeholder="Id"
 					th:field="*{id}" /> <span th:if="${#fields.hasErrors('id')}"
 					th:errors="*{id}"> </span>
-				<button type="submit">Inserisci</button>
+				<button type="submit">Inserisci</button><br>
 			</div>
 		</article>
 	</form>

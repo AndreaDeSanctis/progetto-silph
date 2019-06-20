@@ -103,7 +103,6 @@ article {
 
 .logintab {
 	display: inline-block;
-    background: white; /* Colore di sfondo */
     border: 1px solid #323232; /* Bordo */
     height: 30px; /* Altezza casella*/
     width: 300px; /* Larghezza */
