@@ -17,6 +17,17 @@ public class Fotografia {
 	String categoria;
 	private long idFotografo;
 	
+	public Fotografia(String nome, String categoria, long idFotografo) {
+		super();
+		this.nome = nome;
+		this.categoria = categoria;
+		this.idFotografo = idFotografo;
+	}
+	
+	public Fotografia() {
+		super();
+	}
+	
 	public long getId() {
 		return id;
 	}

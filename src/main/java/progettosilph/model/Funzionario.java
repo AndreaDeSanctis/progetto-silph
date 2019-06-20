@@ -40,12 +40,12 @@ public class Funzionario {
      * @param username The username of this Funzionario for authentication
      * @param password The password of this Funzionario for authentication
      */
-	public Funzionario(Long id, String nome, String cognome, String username, String password) {
-        this.id = id;
+	public Funzionario(String nome, String cognome, String username, String password, String role) {
         this.nome = nome;
         this.cognome = cognome;
         this.username = username;
         this.password = password;
+        this.role = role;
     }
 	 /**
      * Empty Constructor

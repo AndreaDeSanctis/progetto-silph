@@ -25,6 +25,15 @@ public class Richiesta {
 	@OneToMany
 	private List<Fotografia> fotografie = new LinkedList<>();
 	
+	public Richiesta(String nome) {
+		super();
+		this.nome = nome;
+	}
+	
+	public Richiesta() {
+		super();
+	}
+	
 	public long getId() {
 		return id;
 	}

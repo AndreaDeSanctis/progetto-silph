@@ -16,6 +16,16 @@ public class Fotografo {
 	private String nome;
 	private String cognome;
 	
+	public Fotografo(String nome, String cognome) {
+		super();
+		this.nome = nome;
+		this.cognome = cognome;
+	}
+	
+	public Fotografo() {
+		super();
+	}
+	
 	public long getId() {
 		return id;
 	}
