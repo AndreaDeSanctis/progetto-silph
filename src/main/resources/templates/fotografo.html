@@ -37,10 +37,12 @@
 	<div>
 		<div class="dati">
 		<h2>
-			Nome: <span th:text="${fotografo.nome}">qui-va-nome</span>
+			Nome: &ensp; <span th:text="${fotografo.nome}">qui-va-nome</span>
 		<br>
-			Cognome: <span th:text="${fotografo.cognome}">qui-va-cognome</span>
-		<br>
+			Cognome: &ensp; <span th:text="${fotografo.cognome}">qui-va-cognome</span>
+		<br> 
+			Id: &ensp; <span th:text="${fotografo.id}">qui-va-id</span>
+		<br>	
 			<img th:src="'/images/fotografi' + '/' + ${fotografo.nome}+'_' +${fotografo.cognome} + '.jpg' " alt="immagine ph" />
 		</h2>
 		</div>

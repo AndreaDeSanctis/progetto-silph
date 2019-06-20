@@ -127,6 +127,7 @@ header h1 a {
 	position: absolute;
 	padding-top: 30vh;
 	padding-left: 15vh;
+	line-height: 1.6;
 }
 
 .dati span {
@@ -137,9 +138,9 @@ header h1 a {
 }
 
 .dati img {
-	height:20vh;
-	width: 20vh;
+	height:40vh;
+	width: 40vh;
 	position:relative;
-	top:1.5vh;
+	top:2vh;
 }
 
