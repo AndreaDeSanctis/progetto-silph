@@ -126,6 +126,7 @@ header h1 a {
 .dati {
 	position: absolute;
 	padding-top: 30vh;
+	line-height: 1.6;
 	padding-left: 15vh;
 }
 
@@ -138,13 +139,14 @@ header h1 a {
 
 .fotografia {
 	position: absolute;
-	left: 10vh;
-	top: 40vh;
-	height: 60vh;
-	width: 60vh;
+	height:70vh;
+	width:70 vh;
+	right: 20vh;
+	top: 25vh;
 }
 
 .fotografia a img {
-	height: 60vh;
-	width: 60vh;
+	height: 70vh;
+	width: 70vh;
+	max-width: 100%
 }
