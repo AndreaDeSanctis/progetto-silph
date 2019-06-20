@@ -39,7 +39,8 @@
 
 		<div class="list">
 			<ul>
-				<li class="elenco" th:each="fotografia : ${fotografie}"> <a th:href="@{'/fotografia' + '/' + ${fotografia.id}}" > <img
+				<li class="elenco" th:each="fotografia : ${fotografie}"> <a 
+				        th:href="@{'/fotografia' + '/' + ${fotografia.id}}" > <img
 						th:src="'/images/fotografie' + '/' + ${fotografia.nome} + '.jpg'"
 						alt="fotografia" />
 				</a><br><em><a 

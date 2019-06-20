@@ -38,12 +38,16 @@
 		
 		<div>
 		<ul class="list">
-			<li class="elenco"
-				th:each="fotografo : ${fotografi}"><a
-				th:href="@{'/fotografo' + '/' + ${fotografo.id}}"
-				th:text="${fotografo.nome}"> qui-va-nome </a>
+			<li class="elenco" th:each="fotografo : ${fotografi}"> <a
+				th:href="@{'/fotografo' + '/' + ${fotografo.id}}"> <img 
+				th:src="'/images/fotografi' + '/' + ${fotografo.nome}+'_' +${fotografo.cognome} + '.jpg' " 
+				alt="immagine ph" />
+			</a> <br> <em>
 				<a th:href="@{'/fotografo' + '/' + ${fotografo.id}}"
-				th:text="${fotografo.cognome}"> qui-va-cognome </a>
+				 th:text="${fotografo.nome}"> qui-va-nome </a> </em> <em>
+				<a th:href="@{'/fotografo' + '/' + ${fotografo.id}}"
+				th:text="${fotografo.cognome}"> qui-va-cognome </a> </em>
+			</li>
 		</ul>
 		</div>
 	</section>
