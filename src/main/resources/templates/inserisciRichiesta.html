@@ -4,11 +4,11 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Inserimento Fotografia</title>
-<meta name="description" content="inserimento fotografia" />
+<title>Inserimento Richiesta</title>
+<meta name="description" content="inserimento richiesta" />
 <meta name="author" content="Andrea De Sanctis, Michele Capezzani" />
-<link href="../static/css/inserisciFotografo.css"
-	th:href="@{/css/inserisciFotografo.css}" rel="stylesheet" />
+<link href="../static/css/inserisciRichiesta.css"
+	th:href="@{/css/inserisciRichiesta.css}" rel="stylesheet" />
 <!-- <link rel="stylesheet" type="text/css" href="css/inserisciFotografo.css" /> -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700'
 	rel='stylesheet' type='text/css'>
@@ -27,22 +27,14 @@
 	</header>
 
 	<div class="sottotitolo">
-		<h2>Inserisci l'id del fotografo, la categoria e il nome della foto:</h2>
+		<h2>Inserisci il nome della richiesta:</h2>
 	</div>
 
-	<form th:action="@{/fotografia}" method="POST"
-		th:object="${fotografia}">
+	<form th:action="@{/richiesta}" method="POST"
+		th:object="${richiesta}">
 		<article>
 			<div class="logintab">
-				Id Fotografo: <input type="text" name="idFotografo"
-					placeholder="Id Fotografo" th:field="*{idFotografo}" /> <span
-					th:if="${#fields.hasErrors('idFotografo')}"
-					th:errors="*{idFotografo}"></span> 
-					<br> Categoria: <input
-					type="text" name="categoria" placeholder="Categoria"
-					th:field="*{categoria}" /> <span
-					th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}">
-				</span> <br> Nome: <input type="text" name="nome" placeholder="Nome"
+				Nome: <input type="text" name="nome" placeholder="Nome"
 					th:field="*{nome}" /> <span th:if="${#fields.hasErrors('nome')}"
 					th:errors="*{nome}"> </span>
 				<button type="submit">Inserisci</button>
