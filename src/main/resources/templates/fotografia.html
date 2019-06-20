@@ -19,7 +19,7 @@
 </head>
 <body>
 	<header>
-		<a th:href="@{/}"> <img th:src="@{~/resources/static/images/logo2.jpg}" alt="logo sito">
+		<a th:href="@{/}"> <img th:src="@{~resources/static/images/logo2.jpg}" alt="logo sito">
 		</a>
 		<h1>
 			<a th:href="@{/}">Silph Srl</a>
@@ -44,8 +44,7 @@
 	</div>
 
 	<div class="fotografia">
-		<a> <img th:src="@{'/static/images/' + ${fotografia.nome} + '.jpg'}"
-			alt="fotografia">
+		<a> <img th:src="'/images/fotografie' + ${fotografia.nome} + '.jpg'"  alt="fotografia">
 		</a>
 	</div>
 
