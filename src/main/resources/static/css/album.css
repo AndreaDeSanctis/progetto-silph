@@ -131,10 +131,16 @@ header h1 a {
 
 ul {
 	list-style-type: none;
+	margin-left: 10vh;
+	margin-right:10vh;
+	margin-top: 5vh;
 }
 
 .elenco {
 	display: inline-block;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	margin-right:0.8vh;
 }
 
 .elenco a {
