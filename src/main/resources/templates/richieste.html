@@ -41,7 +41,7 @@
 		<ul class="list">
 			<li class="elenco"
 				th:each="richiesta : ${richieste}"><a
-				th:href="@{'/richiesta' + '/' + ${richiesta.id}}"
+				th:href="@{'/richiesta' + '/' + ${richiesta.nome}}"
 				th:text="${richiesta.nome}"> qui-va-nome </a>
 		</ul>
 		</div>

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,21 +44,30 @@ public class RichiestaController {
 		}
 	}
 
-	@RequestMapping(value = "/richiesta/{id}", method = RequestMethod.POST)
-	public String getRichiesta(@Valid @ModelAttribute("richiesta") Richiesta richiesta, 
-			Model model, BindingResult bindingResult) {
-		this.richiestaValidator.validate(richiesta, bindingResult);
-		if(!bindingResult.hasErrors()) {
-			Richiesta richiestaInMemoria = this.richiestaService.richiestaPerNome(richiesta.getNome());
-			if((richiestaInMemoria!=null)) {
-				model.addAttribute("richiesta", richiestaInMemoria);
-				return "richiesta.html";
-			} else {
-				return "richieste.html"; //"scegliRichiesta.html" ???
-			}
+	@RequestMapping(value = "/richiesta/{nome}", method = RequestMethod.GET)
+	public String getRichiesta(@PathVariable ("nome") String nome, Model model) {
+		if(nome != null) {
+			model.addAttribute("richiesta", this.richiestaService.richiestaPerNome(nome));
+			return "richiesta.html"; 
+		} else {
+			model.addAttribute("richieste", this.richiestaService.tutti());
+			return "richieste.html"; 
 		}
-		else return "richieste.html";
 	}
+//	public String getRichiesta(@Valid @ModelAttribute("richiesta") Richiesta richiesta, 
+//			Model model, BindingResult bindingResult) {
+//		this.richiestaValidator.validate(richiesta, bindingResult);
+//		if(!bindingResult.hasErrors()) {
+//			Richiesta richiestaInMemoria = this.richiestaService.richiestaPerNome(richiesta.getNome());
+//			if((richiestaInMemoria!=null)) {
+//				model.addAttribute("richiesta", richiestaInMemoria);
+//				return "richiesta.html";
+//			} else {
+//				return "richieste.html"; //"scegliRichiesta.html" ???
+//			}
+//		}
+//		else return "richieste.html";
+//	}
 
 	@RequestMapping(value = "/addToRichiesta", method = RequestMethod.GET)
 	public String addToRichiesta(Model model) {
