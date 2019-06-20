@@ -30,8 +30,7 @@
 		<h2>Inserisci il nome della richiesta:</h2>
 	</div>
 
-	<form th:action="@{/richiesta}" method="POST"
-		th:object="${richiesta}">
+	<form th:action="@{/richiesta}" method="POST" th:object="${richiesta}">
 		<article>
 			<div class="logintab">
 				Nome: <input type="text" name="nome" placeholder="Nome"

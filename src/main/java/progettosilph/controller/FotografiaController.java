@@ -31,7 +31,7 @@ public class FotografiaController {
 
 		if(!bindingResult.hasErrors()) {
 			this.fotografiaService.inserisci(fotografia);
-			model.addAttribute("album", this.fotografiaService.tutti());
+			model.addAttribute("fotografie", this.fotografiaService.tutti());
 			return "album.html";
 		} else {
 			return "inserisciFotografia.html";

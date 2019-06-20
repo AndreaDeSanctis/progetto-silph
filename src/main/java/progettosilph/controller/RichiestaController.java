@@ -3,6 +3,7 @@ package progettosilph.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,6 +17,7 @@ import progettosilph.service.FotografiaServices;
 import progettosilph.service.RichiestaServices;
 import progettosilph.service.RichiestaValidator;
 
+@Controller
 public class RichiestaController {
 
 	@Autowired
@@ -28,13 +30,14 @@ public class RichiestaController {
 	private FotografiaServices fotografiaService;
 
 	@RequestMapping(value = "/richiesta", method = RequestMethod.POST)
-	public String newFotografia(@Valid @ModelAttribute("richiesta") Richiesta richiesta,
+	public String newRichiesta(@Valid @ModelAttribute("richiesta") Richiesta richiesta,
 			Model model, BindingResult bindingResult) {
 		this.richiestaValidator.validate(richiesta, bindingResult);
 
 		if(!bindingResult.hasErrors()) {
 			this.richiestaService.inserisci(richiesta);
-			model.addAttribute("richieste", richiesta);
+			model.addAttribute("richiesta", richiesta);
+			model.addAttribute("fotografieR", richiesta.getFotografie());
 			return "richiesta.html";
 		} else {
 			return "inserisciRichiesta.html";
@@ -42,13 +45,14 @@ public class RichiestaController {
 	}
 
 	@RequestMapping(value = "/richiesta/{id}", method = RequestMethod.POST)
-	public String loginFunzionario(@Valid @ModelAttribute("richiesta") Richiesta richiesta, 
+	public String getRichiesta(@Valid @ModelAttribute("richiesta") Richiesta richiesta, 
 			Model model, BindingResult bindingResult) {
 		this.richiestaValidator.validate(richiesta, bindingResult);
 		if(!bindingResult.hasErrors()) {
 			Richiesta richiestaInMemoria = this.richiestaService.richiestaPerNome(richiesta.getNome());
 			if((richiestaInMemoria!=null)) {
 				model.addAttribute("richiesta", richiestaInMemoria);
+				model.addAttribute("fotografieR", richiestaInMemoria.getFotografie());
 				return "richiesta.html";
 			} else {
 				return "inserisciRichiesta.html"; //"scegliRichiesta.html" ???
@@ -57,6 +61,12 @@ public class RichiestaController {
 		else return "inserisciRichiesta.html";
 	}
 
+	@RequestMapping(value = "/addToRichiesta", method = RequestMethod.GET)
+	public String addRichiesta(Model model) {
+		model.addAttribute("null", null);
+		return "aggiungiAllaRichiesta.html";
+	}
+	
 	@RequestMapping(value = "/addFotografia/{id}", method = RequestMethod.POST)
 	public String addFotografia(Long id, @RequestParam("id") Long idFoto, Model model, BindingResult bindingResult) {
 
@@ -71,4 +81,5 @@ public class RichiestaController {
 			return "aggiungiAllaRichiesta.html";
 		}
 	}
+	
 }

@@ -1,5 +1,6 @@
 package progettosilph.model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -22,7 +23,7 @@ public class Richiesta {
 	private String nome;
 	
 	@OneToMany
-	private List<Fotografia> fotografie;
+	private List<Fotografia> fotografie = new LinkedList<>();
 	
 	public long getId() {
 		return id;
