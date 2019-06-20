@@ -111,13 +111,13 @@ header h1 a {
 }
 
 .sottotitolo {
+	margin-top:25vh;
 	position: absolute;
-	padding-top: 20vh;
 	padding-left: 10vh;
 }
 
 .sottotitolo h2 {
-	font-size: 5vh;
+	font-size: 6vh;
 	font-weight: 300;
 	text-decoration: none;
 	color: rgba(245, 245, 245, 1);
@@ -139,7 +139,7 @@ ul {
 
 .elenco {
 	display: inline-block;
-	margin-top: 5vh;
+	margin-top: 2.5vh;
 	margin-bottom: 5vh;
 	margin-right:0.8vh;
 }
