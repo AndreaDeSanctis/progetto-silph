@@ -25,7 +25,7 @@
 				<a th:href="@{/}">Silph Srl</a>
 			</h1>
 			<div class="login">
-				<a th:href="@{/loginFunzionario}">Login</a>
+				<a th:href="@{/login}">Login</a>
 			</div>
 			<div class="signup">
 				<a th:href="@{/addFunzionario}">Signup</a>
@@ -40,6 +40,8 @@
 			Nome: <span th:text="${fotografo.nome}">qui-va-nome</span>
 		<br>
 			Cognome: <span th:text="${fotografo.cognome}">qui-va-cognome</span>
+		<br>
+			<img th:src="'/images/fotografi' + '/' + ${fotografo.nome}+'_' +${fotografo.cognome} + '.jpg' " alt="immagine ph" />
 		</h2>
 		</div>
 	</div>
