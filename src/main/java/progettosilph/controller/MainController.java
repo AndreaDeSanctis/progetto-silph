@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import progettosilph.model.Funzionario;
+import progettosilph.model.Richiesta;
 import progettosilph.service.FotografiaServices;
 import progettosilph.service.FotografoServices;
 
@@ -30,6 +31,13 @@ public class MainController {
 		model.addAttribute("funzionario", new Funzionario());
 		return "login.html";
 	}
+	
+	@RequestMapping(value = "/addRichiesta", method = RequestMethod.GET)
+	public String addRichiesta(Model model) {
+		model.addAttribute("richiesta", new Richiesta());
+		return "inserisciRichiesta.html";
+	}
+
 	
 	@RequestMapping(value = "/visualizzaFotografi", method = RequestMethod.GET)
 	public String visualizzaFotografi(Model model) {

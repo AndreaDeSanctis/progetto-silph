@@ -110,6 +110,23 @@ header h1 a {
 	color: rgba(245, 245, 245, 1);
 }
 
+.richiesta {
+	background: none;
+	position: absolute;
+	height: 6vh;
+	right: 55vh;
+	width: 12.5vh;
+	top: 3vh;
+	text-align: center;
+}
+
+.richiesta a {
+	font-size: 4.5vh;
+	font-weight: 300;
+	text-decoration: none;
+	color: rgba(245, 245, 245, 1);
+}
+
 .sottotitolo {
 	position: absolute;
 	padding-top: 20vh;

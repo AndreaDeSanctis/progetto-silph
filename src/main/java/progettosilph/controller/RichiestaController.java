@@ -57,12 +57,6 @@ public class RichiestaController {
 		else return "inserisciRichiesta.html";
 	}
 
-	@RequestMapping("/addRichiesta")
-	public String addRichiesta(Model model) {
-		model.addAttribute("richiesta", new Richiesta());
-		return "inserisciRichiesta.html";
-	}
-
 	@RequestMapping(value = "/addFotografia/{id}", method = RequestMethod.POST)
 	public String addFotografia(Long id, @RequestParam("id") Long idFoto, Model model, BindingResult bindingResult) {
 
